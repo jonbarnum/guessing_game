@@ -89,7 +89,7 @@ function guessingGameOne (){
             break;
         }
         if (i >= 5){
-            alert ('You didn\'t guess very good');
+            alert ('You didn\'t guess the correct answer. The correct answer is 33');
         }
     }
 }
