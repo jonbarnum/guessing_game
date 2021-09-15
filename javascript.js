@@ -73,15 +73,24 @@ function questionFive () {
 document.getElementById ('firstGuessingGame').onclick = function () {guessingGameOne ()};
 
 function guessingGameOne (){
-    let guessingGameOne = prompt ('Guess A Number Between 1 and 50');
-    let numberGuess = 33;
+    let userGuess = prompt ('Guess a number between 1 and 50');
     document.getElementById ('firstGuessingGame').innerHTML;
-    for (i = 0; i < 6; i++){
-        if (numberGuess < 33) {
-            console.log('Guess again, your guess was too low')
-        } else if (numberGuess > 33) {
-            console.log('That was too high, guess lower')
-        } else if (numberGuess === 33)
-        console.log('Congratulations!!!!, You guessed the number right')
+
+    let correctAnswer = 33;
+    let numberOfGuesses = 6
+
+    for (let i = 1; i < numberOfGuesses; i++) {
+        if (userGuess < correctAnswer) {
+            userGuess = prompt ('Too Low, guess again');
+        } else if (userGuess > correctAnswer){
+            userGuess = prompt ('Too High, guess again');
+        } else if (userGuess == correctAnswer){
+            alert ('That\'s Correct');
+            break;
         }
+        if (i >= 5){
+            alert ('You didn\'t guess very good');
+        }
+    }
 }
+
