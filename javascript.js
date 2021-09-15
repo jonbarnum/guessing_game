@@ -1,7 +1,7 @@
 'use strict';
 
-let firstName = prompt('What is your name?');
-let responseIntro = alert('Hello ' + firstName + '. Wecome to my site and I am excited for you to get to know me!!!');
+// let firstName = prompt('What is your name?');
+// let responseIntro = alert('Hello ' + firstName + '. Wecome to my site and I am excited for you to get to know me!!!');
 // console.log(firstName);
 
 
@@ -70,3 +70,18 @@ function questionFive () {
     }
 }
 
+document.getElementById ('firstGuessingGame').onclick = function () {guessingGameOne ()};
+
+function guessingGameOne (){
+    let guessingGameOne = prompt ('Guess A Number Between 1 and 50');
+    let numberGuess = 33;
+    document.getElementById ('firstGuessingGame').innerHTML;
+    for (i = 0; i < 6; i++){
+        if (numberGuess < 33) {
+            console.log('Guess again, your guess was too low')
+        } else if (numberGuess > 33) {
+            console.log('That was too high, guess lower')
+        } else if (numberGuess === 33)
+        console.log('Congratulations!!!!, You guessed the number right')
+        }
+}

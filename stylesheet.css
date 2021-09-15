@@ -22,3 +22,27 @@ p {
 .clickForQuestion {
     background-color: #FFBE7D;
 }
+
+#orderList {
+    text-align: center;
+    list-style-position: inside;
+}
+
+#education {
+    list-style-position: inside;
+    text-align: center;
+}
+
+#workExperience {
+    list-style-position: inside;
+    text-align: center;
+}
+
+#moreQuestions {
+    display: flex;
+    justify-content: center;
+}
+
+.guessingQuestion {
+    padding: 10px 30px;
+}
