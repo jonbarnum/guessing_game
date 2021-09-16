@@ -84,7 +84,7 @@ function guessingGameOne (){
     document.getElementById ('firstGuessingGame').innerHTML;
 
     let correctAnswer = 33;
-    let numberOfGuesses = 6
+    let numberOfGuesses = 6;
 
     for (let i = 1; i < numberOfGuesses; i++) {
         if (userGuess < correctAnswer) {
@@ -117,7 +117,7 @@ function guessingGameTwo () {
         numOfGuesses--;
         for (let i =0; i < answerArray.length; i++) {
             if (guess === answerArray[i]) {
-                alert('You Guessed Right')
+                alert('You Guessed Right');
                 correctGuess++;
                 score++;
                 if (correctGuess == 2) {
@@ -126,14 +126,14 @@ function guessingGameTwo () {
                     break;
                 }
             } else if (i >= answerArray.length - 1) {
-                alert ('You guessed wrong!')
+                alert ('You guessed wrong!');
             }
         }
     }
 
     if (!numOfGuesses) {
         alert ('Out of Guesses. Correct teams are Southampton and Real Salt Lake');
-        alert (`Out of 8 possible right answers you got: ${score}.`)
+        alert (`Out of 8 possible right answers you got: ${score}.`);
         score = 0;
     }
 }
