@@ -4,6 +4,8 @@
 // let responseIntro = alert('Hello ' + firstName + '. Wecome to my site and I am excited for you to get to know me!!!');
 // console.log(firstName);
 
+let score = 0;
+
 
 document.getElementById ('buttonOne').onclick = function () {questionOne ()};
 
@@ -13,6 +15,7 @@ function questionOne () {
     // console.log(questionOne);
     if (questionOne.toLowerCase () === 'yes') {
         alert ('That is correct!!!');
+        score++;
     } else {
         alert ('Sorry that is incorrect.');
     }
@@ -26,6 +29,7 @@ function questionTwo (){
     // console.log (questionTwo);
     if (questionTwo.toLowerCase () === 'yes') {
         alert ('You guessed correctly');
+        score++;
     } else {
         alert ('I am so sorry, that is not correct');
     }
@@ -39,6 +43,7 @@ function questionThree (){
     // console.log (questionThree);
     if (questionThree.toLowerCase () === 'no'){
         alert ('Correct, you have been reading my bio!');
+        score++;
     } else {
         alert ('I\'m sorry, that is not correct, please reread my eduction');
     }
@@ -52,6 +57,7 @@ function questionFour () {
     // console.log (questionFour);
     if (questionFour.toLowerCase () === 'no') {
         alert ('You are absolutely right');
+        score++;
     } else {
         alert ('No, no I did not love being a police officer');
     }
@@ -65,6 +71,7 @@ function questionFive () {
     // console.log (questionFive);
     if (questionFive.toLowerCase () === 'no') {
         alert ('100% correct!');
+        score++;
     } else {
         alert ('Nope, it was the worst');
     }
@@ -86,6 +93,7 @@ function guessingGameOne (){
             userGuess = prompt ('Too High, guess again');
         } else if (userGuess == correctAnswer){
             alert ('That\'s Correct');
+            score++;
             break;
         }
         if (i >= 5){
@@ -102,21 +110,31 @@ function guessingGameTwo () {
     
     let answerArray = ['Real Salt Lake', 'Southampton'];
     let numOfGuesses = 7;
+    let correctGuess = 0;
     
-    hasGuessesLeft: while (numOfGuesses){
+    while (numOfGuesses && correctGuess < 2){
         let guess = prompt ('Choose my favorite two soccer teams: ' + soccerTeams);
         numOfGuesses--;
         for (let i =0; i < answerArray.length; i++) {
             if (guess === answerArray[i]) {
                 alert('You Guessed Right')
-                break hasGuessesLeft;  
-            } 
+                correctGuess++;
+                score++;
+                if (correctGuess == 2) {
+                    alert (`Out of 8 possible right answers you got: ${score}.`)
+                    score = 0;
+                    break;
+                }
+            } else if (i >= answerArray.length - 1) {
+                alert ('You guessed wrong!')
+            }
         }
-        alert('You guessed wrong!');
     }
 
     if (!numOfGuesses) {
-        alert ('Out of Guesses');
+        alert ('Out of Guesses. Correct teams are Southampton and Real Salt Lake');
+        alert (`Out of 8 possible right answers you got: ${score}.`)
+        score = 0;
     }
 }
 
