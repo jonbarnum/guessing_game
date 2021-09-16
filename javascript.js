@@ -1,7 +1,3 @@
-
-function grouped(){
-
-
     'use strict';
     
     let firstName = prompt('What is your name?');
@@ -120,7 +116,7 @@ function grouped(){
             let guess = prompt ('Choose my favorite two soccer teams: ' + soccerTeams);
             numOfGuesses--;
             for (let i =0; i < answerArray.length; i++) {
-                if (guess === answerArray[i]) {
+                if (guess == answerArray[i]) {
                     alert('You Guessed Right');
                     correctGuess++;
                     score++;
@@ -141,8 +137,6 @@ function grouped(){
             score = 0;
         }
     }
-}
-grouped();
 
 
 
