@@ -94,3 +94,29 @@ function guessingGameOne (){
     }
 }
 
+document.getElementById ('secondGuessingGame').onclick = function () {guessingGameTwo ()};
+
+function guessingGameTwo () {
+    let soccerTeams = ['Real Salt Lake ', ' Barcelona ', ' Liverpool ', ' Chelsea ', ' FC Bayern Munic ', ' Southampton ', ' Millwall ', ' Sunderland ', ' Manchester United ', ' Manchester City ' , ' LA Galaxy ', ' Seattle Sounders ', ' BVB ', ' Valcenia ', ' Real Madrid '];
+    document.getElementById ('secondGuessingGame').innerHTML;
+    
+    let answerArray = ['Real Salt Lake', 'Southampton'];
+    let numOfGuesses = 7;
+    
+    hasGuessesLeft: while (numOfGuesses){
+        let guess = prompt ('Choose my favorite two soccer teams: ' + soccerTeams);
+        numOfGuesses--;
+        for (let i =0; i < answerArray.length; i++) {
+            if (guess === answerArray[i]) {
+                alert('You Guessed Right')
+                break hasGuessesLeft;  
+            } 
+        }
+        alert('You guessed wrong!');
+    }
+
+    if (!numOfGuesses) {
+        alert ('Out of Guesses');
+    }
+}
+
