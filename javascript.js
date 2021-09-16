@@ -1,8 +1,8 @@
 'use strict';
 
-// let firstName = prompt('What is your name?');
-// let responseIntro = alert('Hello ' + firstName + '. Wecome to my site and I am excited for you to get to know me!!!');
-// console.log(firstName);
+let firstName = prompt('What is your name?');
+let responseIntro = alert('Hello ' + firstName + '. Wecome to my site and I am excited for you to get to know me!!!');
+console.log(firstName);
 
 let score = 0;
 
