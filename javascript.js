@@ -105,7 +105,7 @@
     document.getElementById ('secondGuessingGame').onclick = function () {guessingGameTwo ()};
     
     function guessingGameTwo () {
-        let soccerTeams = ['Real Salt Lake ', ' Barcelona ', ' Liverpool ', ' Chelsea ', ' FC Bayern Munic ', ' Southampton ', ' Millwall ', ' Sunderland ', ' Manchester United ', ' Manchester City ' , ' LA Galaxy ', ' Seattle Sounders ', ' BVB ', ' Valcenia ', ' Real Madrid '];
+        let soccerTeams = ['Real Salt Lake ', ' Barcelona ', ' Liverpool ', ' Chelsea ', ' FC Bayern Munic ', ' Southampton ', ' Millwall ', ' Sunderland ', ' Manchester United ', ' Manchester City ' , ' LA Galaxy ', ' Seattle Sounders ', ' BVB ', ' Valecenia ', ' Real Madrid '];
         document.getElementById ('secondGuessingGame').innerHTML;
         
         let answerArray = ['Real Salt Lake', 'Southampton'];
