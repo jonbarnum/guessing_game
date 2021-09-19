@@ -120,6 +120,7 @@
                     alert('You Guessed Right');
                     correctGuess++;
                     score++;
+                    break;
                     if (correctGuess == 2) {
                         alert (`Out of 8 possible right answers you got: ${score}.`)
                         score = 0;
@@ -130,7 +131,7 @@
                 }
             }
         }
-    
+          
         if (!numOfGuesses) {
             alert ('Out of Guesses. Correct teams are Southampton and Real Salt Lake');
             alert (`Out of 8 possible right answers you got: ${score}.`);
